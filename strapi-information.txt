@@ -1,0 +1,11 @@
+1. To create a strapi app: npx create-strapi-app dj-events-backend
+2. To use cloudinary in strapi install - npm i @strapi/provider-upload-cloudinary and add
+    middlewares.js and plugins.js file in config folder (https://github.com/strapi/strapi/tree/main/packages/providers/upload-cloudinary)
+3. To run strapi server - npm run develop
+4. To fetch all the events - http://localhost:1337/api/events
+5. To fetch all the events with images - http://localhost:1337/api/events/?[populate]=*
+6. To fetch events by slug - http://localhost:1337/api/events?filters[slug][$eq]=${slug}&[populate]=*
+7. To filter events by name - http://localhost:1337/api/events?filters[name][$contains]=${term}
+8. To filter records by a field - GET /api/users?filters[username][$eq]=John
+9. To filter records by multiple fields - GET /api/books?filters[$or][0][date][$eq]=2020-01-01&filters[$or][1][date][$eq]=2020-01-02&filters[author][name][$eq]=Kai%20doe
+
